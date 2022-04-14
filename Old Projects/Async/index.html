@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let id = ['-O_cRS4U8fU', 'Zzey8DjnV1M'];
+
+    class GetData{
+        constructor(id) {
+            this.id = id;
+        }
+
+        async getUser(){
+            await fetch(`https://www.youtube.com/watch?v=${this.id}`)
+        }
+
+        async getPost(idPost){
+            return await fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`)
+        }
+    }
+
+
+    let first = new GetData(id[0]);
+
+    first.getPost(1).then((response) => response.json())
+        .then((json) => console.log(json));
+
+
+
+    let second = new GetData(id[1]);
+
+    second.getPost(2).then((response) => response.json())
+        .then((json) => console.log(json));
+
+
+
+    async function processRequest(response){
+        return `Extra Information ${response}`
+    }
+
+    //processRequest(12).then(e=>console.log(e)).catch(e=> console.log(e));
+
+
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+
+    async function fethTodos() {
+        let b = [];
+        b.push((await fetch(url)).json());
+        b.push((await fetch(url)).json());
+        return b
+    }
+
+
+    fethTodos().then(e=>console.log(e))
+
+</script>
+
+</body>
+</html>

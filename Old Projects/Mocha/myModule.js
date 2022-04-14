@@ -1,0 +1,1 @@
+let cl = (n) => console.log(n);

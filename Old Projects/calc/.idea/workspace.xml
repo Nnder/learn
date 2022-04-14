@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b76f8f7-69b7-45a3-b0f5-40a3dea27b90" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gPEEXhug9JToOP3E4vTvcyMGEd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.ind.html">
+    <configuration name="ind.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/calc/ind.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/calc/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.ind.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b76f8f7-69b7-45a3-b0f5-40a3dea27b90" name="Default Changelist" comment="" />
+      <created>1598007715713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598007715713</updated>
+      <workItem from="1598007716763" duration="13510000" />
+      <workItem from="1598354733893" duration="2730000" />
+      <workItem from="1598552552268" duration="21000" />
+      <workItem from="1602798133275" duration="964000" />
+      <workItem from="1602850968783" duration="599000" />
+      <workItem from="1602852792073" duration="599000" />
+      <workItem from="1602855151928" duration="599000" />
+      <workItem from="1602936417335" duration="599000" />
+      <workItem from="1603054331314" duration="89000" />
+      <workItem from="1607362360212" duration="1682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2373" y="66" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598012500761">
+      <screen x="1920" y="0" width="1600" height="900" />
+    </state>
+    <state x="2373" y="66" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.38.1920.1080/1920.0.1600.900@1920.0.1600.900" timestamp="1598012500761" />
+    <state x="2383" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1598008177276">
+      <screen x="1920" y="0" width="1600" height="900" />
+    </state>
+    <state x="2383" y="193" width="672" height="678" key="search.everywhere.popup/0.38.1920.1080/1920.0.1600.900@1920.0.1600.900" timestamp="1598008177276" />
+  </component>
+</project>

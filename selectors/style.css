@@ -1,0 +1,17 @@
+/* div span#span{
+    background: yellow;
+} */
+
+/* 
+div:nth-child(2n+1){
+    background: yellow;
+}
+
+
+span#span {
+    color: white;
+} */
+
+/* div:last-child{
+    background: red;
+} */

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <title>Esprima: Continuous Integration</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/foundation/foundation.min.css">
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <div class="row">
+    <div class="twelve columns">
+      <nav class="top-bar">
+        <ul>
+          <li class="name">
+             <h1><a href="../index.html">Esprima</a></h1>
+          </li>
+        </ul>
+        <section>
+          <ul class="right">
+            <li class="divider show-for-medium-and-up"></li>
+            <li class="has-dropdown">
+              <a href="../demo/index.html">Demo</a>
+              <ul class="dropdown">
+                <li><label>Static Analysis</label></li>
+                <li><a href="../demo/parse.html">Online Parsing</a></li>
+                <li><a href="../demo/validate.html">Syntax Validator</a></li>
+                <li><a href="../demo/precedence.html">Operator Precedence</a></li>
+                <li><a href="../demo/collector.html">Regex Collector</a></li>
+                <li><label>Dynamic Tracing</label></li>
+                <li><a href="../demo/functiontrace.html">Function Instrumentation</a></li>
+                <li><label>Code Transformation</label></li>
+                <li><a href="../demo/rewrite.html">Source Rewrite</a></li>
+                <li><a href="../demo/minify.html">Minifiy &amp; Obfuscate</a></li>
+                <li><label>Editing Tools</label></li>
+                <li><a href="../demo/highlight.html">Identifier Highlight</a></li>
+                <li><a href="../demo/rename.html">Rename Refactoring</a></li>
+                <li><a href="../demo/autocomplete.html">Autocomplete</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="ci.html#">Project</a>
+              <ul class="dropdown">
+                <li><a href="http://github.com/jquery/esprima">Git Repository</a></li>
+                <li><a href="ci.html">Continuous Integration</a></li>
+                <li><a href="http://groups.google.com/group/esprima">Mailing List</a></li>
+                <li><a href="https://github.com/jquery/esprima/issues">Issue Tracker</a></li>
+                <li class="divider"></li>
+                <li><label>QA</label></li>
+                <li><a href="index.html">Unit Tests</a></li>
+                <li><a href="benchmarks.html">Benchmarks Suite</a></li>
+                <li><a href="compare.html">Speed Comparison</a></li>
+                <li><a href="module.html">Module Loading</a></li>
+                <li><a href="https://codecov.io/github/jquery/esprima">Coverage Analysis</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="../doc/index.html">Documentation</a>
+              <ul class="dropdown">
+                <li><a href="../doc/index.html">Usage</a></li>
+                <li><a href="../doc/videos.html">Videos</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Title and subtitle -->
+  <div class="row">
+    <div class="twelve columns">
+      <h3 class="subheader"><strong>Continuous integration</strong> maintains the code quality</h3>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="row">
+    <div class="eight columns">
+
+      <h4>Unit tests and regression tests</h4>
+      <p>Thousands of Esprima's unit tests and regression tests are executed in a Node.js environment on Linux using
+      <strong>Travis CI</strong> and on Windows using <strong>AppVeyor</strong>.
+      It is integrated with the pull request workflow of GitHub so that a change that causes one or more failing tests
+      will be flagged appropriately.</p>
+      <p>Travis CI build information of Esprima is available at
+      <a href="http://travis-ci.org/jquery/esprima">travis-ci.org/jquery/esprima</a>.<br/>
+      AppVeyor build status of Esprima is available at
+      <a href="https://ci.appveyor.com/project/ariya/esprima">ci.appveyor.com/project/ariya/esprima</a>.</p>
+      <img src="../assets/images/travisci.png" width="580" height="249"/>
+      <img src="../assets/images/appveyor.png" width="580" height="299"/>
+
+      <h4>Code coverage tracking</h4>
+      <p>To prevent any potential coverage regression, the information on the code coverage after running the entire
+      unit tests is posted to <strong>Codecov.io</strong>. The coverage analysis itself is running on
+      <strong>Circle CI</strong>.
+      Using Codecov.io integration with Github, the change in code coverage (whether it stays the same, regresses, or
+      improves) for every pull request will be automatically posted as a comment.</p>
+      <p>Codecov.io dashboard for Esprima is available at
+      <a href="https://codecov.io/github/jquery/esprima">codecov.io/github/jquery/esprima</a>.</p>
+      <img src="../assets/images/codecov.png" width="580" height="165"/>
+
+      <a name="downstream"></a><h4>Downstream project tests</h4>
+      <p>There are many widely used open-source projects out there, from
+      <a href="https://github.com/gotwarlost/istanbul">Istanbul</a> to
+      <a href="https://github.com/benjamn/recast">Recast</a>, which depend on Esprima. An unknown issue in Esprima during
+      its development, that is not caught by its own test suite, may cause those downstream projects to regress.
+      To prevent this from happening, the development version of Esprima is used to run the test suite of a selected
+      set of downstream projects. This is running on <strong>Circle CI</strong> and the entire process typically takes
+      around 13 minutes to complete.</p>
+      <p>Circle CI build status of Esprima is available at
+      <a href="https://circleci.com/gh/jquery/esprima">circleci.com/gh/jquery/esprima</a>.</p>
+      <img src="../assets/images/circleci.png" width="580" height="255"/>
+
+      <h4>Cross-browser tests</h4>
+      <p>To ensure that Esprima works well with the major popular web browsers out there, its test suite is also executed on a number of different browsers via <strong>Sauce Labs</strong>.
+      This test is orchestrated using another hosted CI, <strong>drone.io</strong>.</p>
+      <p>The build history at drone.io is available at
+      <a href="https://drone.io/github.com/jquery/esprima">drone.io/github.com/jquery/esprima</a>.</p>
+      <p>The following browser matrix summarizes the test coverage. The full dashboard is available
+      at <a href="https://saucelabs.com/u/esprima">saucelabs.com/u/esprima</a>.</p>
+      <a href="https://saucelabs.com/u/esprima">
+      <img src="https://saucelabs.com/browser-matrix/esprima.svg" alt="Sauce Test Status"/>
+      </a>
+    </div>
+
+    <div class="four columns">
+      <div class="panel">
+        <p><strong>Every</strong> single commit, including the one in every <strong>pull request</strong>, is subjected
+          to a set of tests to ensure the <strong>quality</strong> of the corresponding changes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="row copyright">
+    <div class="six columns">
+      <p>Esprima is created and maintained by <a href="http://ariya.io">Ariya Hidayat</a>.</p>
+    </div>
+    <div class="six columns">
+      <ul class="link-list right">
+        <li><a href="https://github.com/jquery/esprima">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

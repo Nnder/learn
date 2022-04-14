@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+  let canvas = document.querySelector('#canvas');
+  let ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  main();
+
+  async function main(){
+    const image = await  loadImage('https://sun9-50.userapi.com/impf/c851328/v851328656/2b202/vHIjAGnonJM.jpg?size=1048x1500&quality=96&sign=b4312f7d0a6dd866b28edca217f321da&type=album');
+
+    ctx.drawImage(image,100,100,341,593,125,113,500,500,125,113);
+  }
+
+  function loadImage(src){
+    return new Promise(resolve => {
+      const image = new Image()
+      image.src = src
+      image.onload = ()=>{
+        resolve(image);
+      }
+    })
+  }
+
+
+</script>
+</body>
+</html>

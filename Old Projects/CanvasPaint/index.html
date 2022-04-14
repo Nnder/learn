@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<input type="color" id="color">
+
+<script>
+    let canvas = document.querySelector('#canvas');
+    let ctx = canvas.getContext('2d');
+    let color = 'black';
+
+    document.querySelector('#color').oninput = function (){
+        color = this.value;
+    };
+
+    let mouseEvent = false;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function paint(x,y){
+
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI*2);
+        ctx.lineWidth = '5';
+        ctx.strokeStyle = color;
+
+        //ctx.fillRect(x,y,10,10);
+        ctx.lineTo(x,y);
+        ctx.stroke();
+        ctx.fill()
+    }
+
+    canvas.onmousemove = function (e){
+
+    }
+
+    window.addEventListener('mousemove', (e)=>{
+       if (mouseEvent){
+            paint(e.clientX, e.clientY);
+       }
+    });
+
+    window.addEventListener('mousedown', (e)=>{
+       mouseEvent = true;
+    });
+
+    window.addEventListener('mouseup', (e)=>{
+        mouseEvent = false;
+        ctx.closePath();
+
+    });
+
+
+
+
+</script>
+</body>
+</html>

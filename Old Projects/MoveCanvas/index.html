@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+  <script>
+    let canvas = document.querySelector('#canvas');
+    let ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let x = 10;
+    let y = 10;
+
+    function moveRect(x,y){
+        clear(canvas);
+        ctx.fillRect(x, y, 100, 100);
+    }
+
+    moveRect(x,y);
+
+    window.addEventListener('keydown', (e)=>{
+        if(e.keyCode == 83){
+            moveRect(x,y+= 10);
+        } else if (e.keyCode == 87){
+            moveRect(x,y-=10);
+        } else if (e.keyCode == 65){
+            moveRect(x-=10,y);
+        } else if (e.keyCode == 68){
+            moveRect(x+= 10,y);
+        }
+    });
+
+
+    function clear(canvas){
+        canvas.width = canvas.width;
+    }
+
+    let a = 500;
+    let b = 500;
+
+    function moveLine(x,y){
+        clear(canvas);
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(x,y);
+        ctx.stroke();
+    }
+
+    moveLine(a,b);
+
+    window.addEventListener('keydown', (e)=>{
+        if(e.keyCode == 40){
+            moveLine(a,b+= 10);
+        } else if (e.keyCode == 38){
+            moveLine(a,b-=10);
+        } else if (e.keyCode == 37){
+            moveLine(a-=10,b);
+        } else if (e.keyCode == 39){
+            moveLine(a+= 10,b);
+        }
+    });
+
+
+    // 38 up
+    // 40 down
+    // 37 left
+    // 39 right
+
+  </script>
+</body>
+</html>

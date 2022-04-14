@@ -1,0 +1,16 @@
+{
+  "name": "fullmocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mocha.js",
+  "scripts": {
+    "test": "mocha myClass.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.3"
+  }
+}

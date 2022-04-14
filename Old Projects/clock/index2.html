@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 id="clock">00:00:00</h1>
+<p id="color"></p>
+
+<script>
+    let clock = document.getElementById('clock');
+    let color = document.getElementById('clock');
+    function hexClock(){
+        let time = new Date();
+        let s = time.getSeconds().toString();
+        let m = time.getMinutes().toString();
+        let h = time.getHours().toString();
+
+        if (s.length < 2){
+            s = '0' + s;
+        }
+
+        if (m.length < 2){
+            m = '0' + m;
+        }
+
+        if (h.length < 2){
+            h = '0' + h;
+        }
+
+        let colorString = '#' + h + m + s;
+        let clockString = h + ':' + m + ':' + s;
+
+        color.textContent = colorString;
+        clock.textContent = clockString;
+        document.body.style.background = colorString;
+
+    }
+    hexClock();
+    setInterval(hexClock, 1000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b2a9e7f-4911-4201-bd1f-63d51a330935" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fbPAw3KZwbei4aod15HwxwQWmP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/newJSProject/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b2a9e7f-4911-4201-bd1f-63d51a330935" name="Default Changelist" comment="" />
+      <created>1596483678971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596483678971</updated>
+      <workItem from="1596483680011" duration="1230000" />
+      <workItem from="1596492257890" duration="167000" />
+      <workItem from="1596640700355" duration="5384000" />
+      <workItem from="1596745597525" duration="3326000" />
+      <workItem from="1597121968351" duration="6521000" />
+      <workItem from="1597542188597" duration="1184000" />
+      <workItem from="1597838172950" duration="1236000" />
+      <workItem from="1598354735363" duration="1845000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2542" y="184" width="676" height="629" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597183290449">
+      <screen x="1920" y="0" width="1600" height="900" />
+    </state>
+    <state x="746" y="221" width="417" height="629" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080/1920.0.1280.1024@0.0.1920.1080" timestamp="1596492380033" />
+    <state x="746" y="259" width="676" height="629" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.38.1920.1080/1920.0.1600.900@0.38.1920.1080" timestamp="1596651896151" />
+    <state x="2542" y="184" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.38.1920.1080/1920.0.1600.900@1920.0.1600.900" timestamp="1597183290449" />
+  </component>
+</project>

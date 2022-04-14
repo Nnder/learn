@@ -1,0 +1,19 @@
+{
+  "name": "postget",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.2"
+  },
+  "description": ""
+}

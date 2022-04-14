@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" value="200" id="R">
+<input type="text" value="90" id="r">
+<input type="text" value="100" id="d">
+<button onclick="clear()">Clear</button>
+<canvas id="canvas"></canvas>
+
+<script>
+    let canvas = document.querySelector('#canvas');
+    let ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+
+    let teta = 0;
+    let timer;
+
+    function clear(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.stroke();
+        console.log('123');
+    }
+
+    document.querySelector('button').addEventListener('click', clear);
+
+    function spiro(){
+
+        let R = document.querySelector('#R').value;
+        let r = document.querySelector('#r').value;
+        let d = document.querySelector('#d').value;
+
+
+        let x = (R-r)*Math.cos(teta)+d*Math.cos((R-r)*teta/r) ;
+        let y = (R-r)*Math.sin(teta)+d*Math.sin((R-r)*teta/r) ;
+        teta+= 0.3;
+
+        ctx.fillRect(canvas.width/2+x,canvas.height/2+y,4,4);
+
+        timer = setTimeout(spiro, 10);
+    }
+
+    spiro();
+</script>
+
+</body>
+</html>

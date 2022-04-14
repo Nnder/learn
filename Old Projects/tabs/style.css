@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	background-color: black;
+	color: black;
+	max-width: 1200px;
+	padding: 20px;
+	text-align: 500px;
+}
+
+.cont {
+	padding: 20px;
+	width: 1200px;
+	margin: 0 auto;
+	background-color: grey;
+}
+
+.tabs-header {
+	display: flex;
+}
+
+.tab {
+	border: 5px solid orange;
+	padding: 15px;
+	cursor: pointer;
+	border-bottom: 1px solid orange;
+}
+
+.tab:hover {
+	background-color: green;
+}
+
+.tab.active {
+	background-color: white;
+}
+
+.tab + .tab {
+	margin-left: 4.75px;
+}
+
+.tab-panel {
+	border: 5px solid orange;
+	display: none;
+	padding: 10px;
+}
+
+.tab-panel.active {
+	display: block;
+}

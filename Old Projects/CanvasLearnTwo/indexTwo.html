@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<script>
+  let canvas = document.querySelector('#canvas');
+  let ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // ctx.beginPath();
+  // ctx.moveTo(188,150);
+  // ctx.quadraticCurveTo(288,0,388,150);
+  // ctx.strokeStyle = 'black';
+  // ctx.fillStyle = 'green';
+  // ctx.fill();
+  // ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(180,130);
+  ctx.bezierCurveTo(140,10,388,10,388,170);
+  ctx.strokeStyle = 'black';
+  ctx.fillStyle = 'green';
+  //ctx.fill();
+  ctx.stroke();
+  
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<button onclick="speech ()">Say</button>
+	<button ondblclick="talk ()">Talk</button>
+	<button ondblclick="stop ()">Stop</button>
+
+	<script>
+		var recognizer = new webkitSpeechRecognition();
+
+		recognizer.interimResults = true;
+
+		recognizer.lang = 'en-En';
+
+		recognizer.onresult = function (event) {
+			var result = event.results[event.resultIndex];
+			if (result.isFinal) {
+				alert('You Say' + result[0].transcript);
+			} else {
+				console.log('Promeshyto4nii result:',
+				result[0].transcript);
+			}
+		};
+
+		function speech () {
+			recognizer.start();
+		}
+
+		function talk () {
+			speechSynthesis.speak(
+				new SpeechSynthesisUtterance('JavaScript Speech
+				Synthesis Utterance')
+			);
+		}
+
+		function stop () {
+			speechSynthesisInstance.pause();
+		}
+	</script>
+	
+</body>
+</html>

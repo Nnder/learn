@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    let canvas = document.querySelector('#canvas');
+    let ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.background = 'black';
+
+
+    ctx.beginPath();
+    ctx.lineWidth = 16;
+    ctx.lineCap = 'square';
+    ctx.lineJoin = 'round';
+
+    ctx.strokeStyle = 'white';
+    ctx.moveTo(10,10);
+    ctx.lineTo(100,100);
+    ctx.lineTo(210,0);
+    ctx.stroke();
+
+    ctx.strokeStyle = 'blue';
+    ctx.beginPath();
+    ctx.moveTo(0,20);
+    ctx.lineTo(100,120);
+    ctx.lineTo(220,10);
+    ctx.stroke();
+
+    ctx.strokeStyle = 'red';
+    ctx.beginPath();
+    ctx.moveTo(-10,30);
+    ctx.lineTo(100,140);
+    ctx.lineTo(230,20);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(200,200,300,200);
+
+    ctx.fillStyle = 'white';
+    ctx.fill();
+
+    ctx.stroke();
+
+
+</script>
+
+</body>
+</html>

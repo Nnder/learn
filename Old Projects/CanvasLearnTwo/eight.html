@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+  let canvas = document.querySelector('#canvas');
+  let ctx = canvas.getContext('2d');
+  let angle = 0;
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let triangle = {
+    centerX: canvas.width/2,
+    centerY: canvas.height/2,
+    radius: 150,
+    angle: 0,
+    angleSpeed: Math.PI*0.01,
+  }
+
+
+  // animation({
+  //   clear(){
+  //     ctx.clearRect(0,0,canvas.width,canvas.height);
+  //   },
+  //   update(){
+  //     angle += Math.PI * 0.01;
+  //   },
+  //   render(){
+  //     ctx.beginPath();
+  //     ctx.arc(
+  //             canvas.width/2 + 150 * Math.cos(angle),
+  //             canvas.height/2 + 150 * Math.sin(angle),
+  //             5,
+  //             0,
+  //             Math.PI*2);
+  //     ctx.fill();
+  //   }
+  // })
+
+  animation({
+    clear(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+    },
+    update(){
+      triangle.angle += triangle.angleSpeed;
+    },
+    render(){
+      let dAngle = Math.PI* 2/3;
+      ctx.beginPath();
+      ctx.moveTo(triangle.centerX + triangle.radius * Math.cos(triangle.angle),triangle.centerY + triangle.radius * Math.sin(triangle.angle));
+      ctx.lineTo(triangle.centerX + triangle.radius * Math.cos(triangle.angle + dAngle),triangle.centerY + triangle.radius * Math.sin(triangle.angle + dAngle));
+      ctx.lineTo(triangle.centerX + triangle.radius * Math.cos(triangle.angle + 2 * dAngle),triangle.centerY + triangle.radius * Math.sin(triangle.angle + 2 * dAngle));
+      ctx.fill();
+    }
+
+  });
+
+
+
+  function animation(obj){
+    const {clear,update,render} = obj;
+
+    requestAnimationFrame(tick);
+
+    function tick(timestamp){
+      console.log(timestamp);
+
+      clear();
+      update();
+      render();
+
+      requestAnimationFrame(tick);
+    }
+  }
+</script>
+
+</body>
+</html>

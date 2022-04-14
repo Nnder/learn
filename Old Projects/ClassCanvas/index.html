@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <script src="Figure.js"></script>
+    <script>
+
+        let arr = [
+            {
+                figure: 'rect',
+                x: 200,
+                y: 200,
+                r: 100,
+                width: 100,
+                height: 100,
+                startAngle: 0,
+                endAngle: Math.PI*2,
+                fillStyle: 'white',
+                strokeStyle: 'black',
+                lineWidth: 10,
+            },
+            {
+                figure: 'rect',
+                x: 100,
+                y: 150,
+                r: 100,
+                width: 100,
+                height: 100,
+                startAngle: 0,
+                endAngle: Math.PI*2,
+                fillStyle: 'blue',
+                strokeStyle: 'black',
+                lineWidth: 10,
+            },
+            {
+                figure: 'rect',
+                x: 300,
+                y: 50,
+                r: 100,
+                width: 100,
+                height: 100,
+                startAngle: 0,
+                endAngle: Math.PI*2,
+                fillStyle: 'red',
+                strokeStyle: 'black',
+                lineWidth: 10,
+            }
+
+        ]
+
+
+        let c = new Figure(arr);
+        c.move(400, 400, 10, 2);
+        console.dir(c.getElements());
+
+
+
+    </script>
+
+</body>
+</html>

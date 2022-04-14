@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery work</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div>12444</div>
+    <a download="hello.txt" href='#' id="link">Загрузить</a>
+    <input type="file" onchange="showFile(this)">
+
+    <script>
+    function showFile(input) {
+        let file = input.files[0];
+    
+      alert(`File name: ${file.name}`); // например, my.png
+      alert(`Last modified: ${file.lastModified}`); // например, 1552830408824
+    }
+    </script>
+
+<input type="file" onchange="readFile(this)">
+
+<script>
+function readFile(input) {
+    let file = input.files[0];
+
+    let reader = new FileReader();
+
+    reader.readAsText(file);
+
+    reader.onload = function() {
+    console.log(reader.result);
+    };
+
+    reader.onerror = function() {
+    console.log(reader.error);
+    };
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+  let canvas = document.querySelector('#canvas');
+  let ctx = canvas.getContext('2d');
+
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let gradient = ctx.createLinearGradient(0,0,500,500);
+  gradient.addColorStop(0,'green');
+  gradient.addColorStop(0.5,'black');
+  gradient.addColorStop(1,'blue');
+
+  let gradientRad = ctx.createRadialGradient(250,250,50,250,250,200);
+  gradientRad.addColorStop(0,'orange');
+  gradientRad.addColorStop(0.5,'white');
+  gradientRad.addColorStop(1,'black');
+
+
+
+  let img = new Image();
+  img.src = 'https://im0-tub-ru.yandex.net/i?id=9dd72fbb5c85aac8b6f405cec3d14535&n=13';
+  img.onload = function (){
+    let pattern = ctx.createPattern(img,'repeat');
+    ctx.fillStyle = pattern;
+    ctx.beginPath();
+    ctx.rect(0,0,600,600);
+    ctx.fill();
+  }
+
+
+  //ctx.fillStyle = gradientRad;
+
+  //ctx.strokeStyle = 'green';
+  ctx.stroke();
+
+
+</script>
+
+</body>
+</html>

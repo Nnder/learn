@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slash</title>
+</head>
+<body style="background: black;" id="bgColor">
+
+<p id="slashRotate" style="font-size: 15em; text-align: center; color: white;">[..........]</p>
+
+<script>
+    let slashRotate = document.getElementById('slashRotate');
+    let bgColor = document.getElementById('bgColor');
+    let num = 0;
+
+    function slash()
+    {
+        num++;
+        if (num === 1)
+        {
+            slashRotate.textContent = "[/.........]";
+            bgColor.style.background = "rgb(127,0,255)";
+        }
+        if (num === 2)
+        {
+            slashRotate.textContent = "[//........]";
+            bgColor.style.background = "rgb(0,250,255)";
+        }
+        if (num === 3)
+        {
+            slashRotate.textContent = "[///.......]";
+            bgColor.style.background = "rgb(0,0,255)";
+        }
+        if (num === 4)
+        {
+            slashRotate.textContent = "[////......]";
+            bgColor.style.background = 'orange';
+        }
+        if (num === 5)
+        {
+            slashRotate.textContent = "[/////.....]";
+            bgColor.style.background = 'green';
+        }
+        if (num === 6)
+        {
+            slashRotate.textContent = "[//////....]";
+            bgColor.style.background = 'yellow';
+        }
+        if (num === 7)
+        {
+            slashRotate.textContent = "[///////...]";
+            bgColor.style.background = 'white';
+        }
+        if (num === 8)
+        {
+            slashRotate.textContent = "[////////..]";
+            bgColor.style.background = "rgb(0,0,255)";
+        }
+        if (num === 9)
+        {
+            slashRotate.textContent = "[/////////.]";
+            bgColor.style.background = "rgb(0,0,255)";
+        }
+        if (num === 10)
+        {
+            slashRotate.textContent = "[//////////]";
+            bgColor.style.background = "rgb(0,0,255)";
+        }
+        if (num === 10)
+        {
+            num = 0;
+        }
+    }
+    setInterval(slash, 500);
+
+
+
+    // function slashOne() {
+    //     slashRotate.textContent = "/";
+    // }
+    // setInterval(slashOne, 1500);
+    //
+    // function slashTwo() {
+    //     slashRotate.textContent = "__";
+    // }
+    // setInterval(slashTwo, 1200);
+    //
+    // function slashThree() {
+    //     slashRotate.textContent = "|";
+    // }
+    // setInterval(slashThree, 1000);
+
+
+
+
+    //изменение цвета вместе с изменение слэшов
+
+    // повторить с интервалом 2 секунды
+    //let timerId = setInterval(() => alert('tick'), 2000);
+
+    // остановить вывод через 5 секунд
+    //setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+
+
+    //переделать вместе с этим
+    //let timerId = setTimeout(...);
+    //clearTimeout(timerId);
+
+</script>
+</body>
+</html>

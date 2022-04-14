@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d">
+        <div>Стоимость недвижимости</div>
+        <div class="input">
+            <input type="number" id="total-cost" value="0">
+        </div>
+        <div class="input">
+            <input type="range" min="0" max="100000000" id="total-cost-range" value="0" class="input-range">
+        </div>
+        <div>Первоначальный взнос</div>
+        <div class="input">
+            <input type="number" id="an-initial-fee" value="100000">
+        </div>
+        <div class="input">
+            <input type="range" min="100000" max="100000000" id="an-initial-fee-range" value="100000" class="input-range">
+        </div>
+        <div>Срок кредита</div>
+        <div class="input">
+            <input type="number" id="credit-term" value="1">
+        </div>
+        <div class="input">
+            <input type="range" min="1" max="35" id="credit-term-range" value="1" class="input-range">
+        </div>
+    </div>
+
+
+    <div class="select_bank">
+        <div>Выбрать банк</div>
+        <button data-name="alfa" class="bank active">
+            <div class="text">Альфа-банк</div>
+            <div class="value">8,7%</div>
+        </button>
+        <button data-name="sberbank" class="bank">
+            <div class="text">Сбербанк</div>
+            <div class="value">8,4%</div>
+        </button>
+        <button data-name="pochta" class="bank">
+            <div class="text">Почта-банк</div>
+            <div class="value">8%</div>
+        </button>
+        <button data-name="tinkoff" class="bank">
+            <div class="text">Тинькофф-банк</div>
+            <div class="value">8,1%</div>
+        </button>
+    </div>
+
+    <div class="display">
+        <div class="out_data">
+            <div>Сумма кредита</div>
+            <div id="amount-of-credit" value="0"></div>
+        </div>
+        <div class="out_data">
+            <div>Ежемесячный платеж</div>
+            <div id="monthly-payments" value="0"></div>
+        </div>
+        <div class="out_data">
+            <div>Рекомендуемый доход</div>
+            <div id="recommend-income" value="0"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

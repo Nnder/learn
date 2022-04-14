@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+  let canvas = document.querySelector('#canvas');
+  let ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let miterLimit = 0;
+
+
+
+
+  animation({
+    clear(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+    },
+    update(timestamp){
+      miterLimit = 100 - 100 * Math.cos(timestamp);
+    },
+    render(){
+
+
+      ctx.beginPath();
+      ctx.lineWidth = 5;
+      ctx.moveTo(0,canvas.height/2);
+
+      for (let i = 0; i <= 100; i++){
+        let y = canvas.height/2 + 100 * (-1)**i
+        ctx.lineTo(i**2,y);
+      }
+      ctx.strokeStyle = 'black';
+      ctx.miterLimit = miterLimit;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0,canvas.height/2 - 75);
+      ctx.lineTo(canvas.width, canvas.height/2-75);
+      ctx.strokeStyle = 'blue';
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0,canvas.height/2 + 75);
+      ctx.lineTo(canvas.width, canvas.height/2+75);
+      ctx.strokeStyle = 'blue';
+      ctx.stroke();
+    }
+
+  });
+
+  function animation(obj){
+    const {clear,update,render} = obj;
+
+    requestAnimationFrame(tick);
+
+    function tick(timestamp){
+      console.log(timestamp);
+
+      clear();
+      update(timestamp);
+      render();
+
+      requestAnimationFrame(tick);
+    }
+  }
+</script>
+</body>
+</html>

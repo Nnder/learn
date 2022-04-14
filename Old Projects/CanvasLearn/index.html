@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+
+    <style>
+        #canvas{
+            border: 3px solid black;
+            margin: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="700"></canvas>
+
+    <script>
+
+
+        let canv = document.querySelector('#canvas');
+        let ctx = canv.getContext('2d');
+
+        ctx.fillStyle = 'red';
+        ctx.fillRect(100,50,150,75);
+
+        ctx.arc(450,130,50,0,Math.PI*2);
+        ctx.fill();
+
+        ctx.clearRect(0,0,1500,700);
+
+
+        ctx.rect(5,10,100,100);
+        ctx.strokeStyle = 'blue';
+
+        ctx.lineWidth = '10';
+        ctx.stroke();
+
+        ctx.fill();
+
+
+
+
+
+        //    x,y,r,startAngle,endAngle
+
+        function printArc(arc){
+            ctx.clearRect(0,0,1500,700);
+            ctx.beginPath();
+            ctx.fillStyle = arc.fillStyle;
+            ctx.lineWidth = arc.lineWidth;
+            ctx.strokeStyle = arc.strokeStyle;
+            ctx.arc(arc.x, arc.y, arc.r, arc.startAngle, arc.endAngle);
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        let obj = {
+            x: 800,
+            y: 500,
+            r: 100,
+            startAngle: 0,
+            endAngle: Math.PI*2,
+            fillStyle: 'blue',
+            strokeStyle: 'black',
+            lineWidth: 10,
+        }
+
+        printArc(obj);
+
+        let s = 0;
+
+
+        setInterval(()=>{
+
+            obj = {
+                x: s++,
+                y: 500,
+                r: 100,
+                startAngle: 0,
+                endAngle: Math.PI*2,
+                fillStyle: 'blue',
+                strokeStyle: 'black',
+                lineWidth: 10,
+            }
+
+            printArc(obj);
+
+        },100);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
