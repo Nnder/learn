@@ -222,3 +222,102 @@ function massGreeting(persons: Person[]){
 }
 
 massGreeting(PersonList)
+
+
+
+
+class Freshener {
+
+}
+class Engine {
+
+}
+
+class Wheel {
+
+}
+
+class Car{
+    engine: Engine;
+    wheels: Wheel[];
+    freshener: Freshener;
+    
+
+    constructor(freshener) {
+        this.freshener = freshener;
+
+        this.engine = new Engine;
+        this.wheels.push(new Wheel());
+        this.wheels.push(new Wheel());
+        this.wheels.push(new Wheel());
+        this.wheels.push(new Wheel());
+    }
+}
+
+
+interface SMTH {
+    device(str: string) : void;
+}
+
+interface SMTsH<T> {
+    device(obj: T) : void;
+}
+
+interface Client {
+    connect(url: string): void;
+    read(): string;
+    write(data: string): void;
+}
+
+
+
+interface Reader {
+    read(url: string): void;
+}
+
+interface Writer {
+    write(data: string): void;
+}
+
+class FileClient implements Reader, Writer {
+    read(url: string): void {
+        
+    }
+
+    write(data: string): void {
+        
+    }
+}
+
+
+class Users {
+    username: string;
+    age: number;
+}
+
+interface Repository<T> {
+    create: (obj: T) => void
+    get: (obj: T) => void
+    delete: (obj: T) => void
+    update: (obj: T) => void
+}
+
+class UserRepo implements Repository<Users> {
+    create(obj: Users): void {
+
+    }
+
+    get(obj: Users): void {
+        
+    }
+
+    delete(obj: Users): void {
+        
+    }
+
+    update(obj: Users): void {
+        
+    }
+}
+
+
