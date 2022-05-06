@@ -41,17 +41,37 @@ class MyPromise {
     }
 
     #onSuccess(value){
-        if(this.#state !== STATE.PENDING) return
-        this.#value = value
-        this.#state = STATE.FULFIELLD
-        this.#runCallbacks()
+        queueMicrotask(()=>{
+            if(this.#state !== STATE.PENDING) return
+
+            if(value instanceof MyPromise){
+                value.then(this.#onSuccessBinded, this.#onFailBinded)
+                return 
+            }
+    
+            this.#value = value
+            this.#state = STATE.FULFIELLD
+            this.#runCallbacks()
+        })
     }
 
     #onFail(value){
-        if(this.#state !== STATE.PENDING) return
-        this.#value = value
-        this.#state = STATE.REJECTED
-        this.#runCallbacks()
+        queueMicrotask(()=>{
+            if(this.#state !== STATE.PENDING) return
+
+            if(value instanceof MyPromise){
+                value.then(this.#onSuccessBinded, this.#onFailBinded)
+                return 
+            }
+
+            if(this.#catchCbs.length === 0){
+                throw new UncaughtPromiseError(value)
+            }
+    
+            this.#value = value
+            this.#state = STATE.REJECTED
+            this.#runCallbacks()
+        })
     }
 
     then(thencb,catchcb){
@@ -88,11 +108,32 @@ class MyPromise {
     }
 
     catch(cb){
-        this.then(undefined,cb);
+        return this.then(undefined,cb);
     }
 
     finally(cb){
+        return this.then(result=> {
+            cb()
+            return result
+        }, result=> {
+            cb()
+            throw result
+        });
+    }
 
+    static resolve(value){
+        return new MyPromise((resolve)=> resolve(value))
+    }
+
+    static reject(value){
+        return new MyPromise((resolve,reject)=> reject(value))
     }
 }
 
+class UncaughtPromiseError extends Error{
+    constructor(error){
+        super(error)
+
+        this.stack = `(in promise) ${error.stack}`
+    }
+}
